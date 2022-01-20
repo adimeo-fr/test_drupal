@@ -1,15 +1,15 @@
-uuid: 6f1cfc6a-eacc-4fe9-beb3-110d3c7d5744
+uuid: ff0c8139-11f5-4bd9-b904-43fa82ca4cbe
 langcode: fr
 status: true
 dependencies:
   module:
     - help
   theme:
-    - bartik
+    - test_drupal
 _core:
   default_config_hash: 8I8iACSa0sKO3k3jlvUG1ge52rfcKX7USJAQYnzuBgg
-id: bartik_help
-theme: bartik
+id: test_drupal_help
+theme: test_drupal
 region: content
 weight: -30
 provider: null
@@ -17,6 +17,6 @@ plugin: help_block
 settings:
   id: help_block
   label: Aide
-  provider: help
   label_display: '0'
+  provider: help
 visibility: {  }

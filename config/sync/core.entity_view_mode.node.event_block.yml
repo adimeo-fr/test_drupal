@@ -1,0 +1,10 @@
+uuid: b8880e10-72b2-43d3-8151-40e5693f9f13
+langcode: fr
+status: true
+dependencies:
+  module:
+    - node
+id: node.event_block
+label: 'Event block'
+targetEntityType: node
+cache: true

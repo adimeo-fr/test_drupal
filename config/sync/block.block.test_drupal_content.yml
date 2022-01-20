@@ -1,15 +1,15 @@
-uuid: 60099314-d0d2-47ac-880d-3bfc38ab13b9
+uuid: f4d11c90-3a95-4a44-b2b6-4e8b4c98b7ad
 langcode: fr
 status: true
 dependencies:
   module:
     - system
   theme:
-    - bartik
+    - test_drupal
 _core:
   default_config_hash: 9EoWV2Lot6FVSr50t4hoKgiz1LIXYWNG-IIPYsWxBqo
-id: bartik_content
-theme: bartik
+id: test_drupal_content
+theme: test_drupal
 region: content
 weight: 0
 provider: null
@@ -17,6 +17,6 @@ plugin: system_main_block
 settings:
   id: system_main_block
   label: 'Contenu de la page principale'
-  provider: system
   label_display: '0'
+  provider: system
 visibility: {  }

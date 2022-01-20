@@ -1,0 +1,81 @@
+uuid: 3f337142-e389-4fb4-9146-d81ca38ee5c7
+langcode: fr
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.event_block
+    - field.field.node.event.body
+    - field.field.node.event.field_date_end
+    - field.field.node.event.field_date_start
+    - field.field.node.event.field_event_type
+    - field.field.node.event.field_image
+    - field.field.node.event.field_string_long
+    - image.style.event_block
+    - node.type.event
+  module:
+    - datetime
+    - image
+    - text
+    - user
+id: node.event.event_block
+targetEntityType: node
+bundle: event
+mode: event_block
+content:
+  body:
+    type: text_trimmed
+    label: visually_hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_date_end:
+    type: datetime_default
+    label: visually_hidden
+    settings:
+      timezone_override: ''
+      format_type: medium
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_date_start:
+    type: datetime_default
+    label: visually_hidden
+    settings:
+      timezone_override: ''
+      format_type: medium
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_event_type:
+    type: entity_reference_label
+    label: visually_hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_image:
+    type: image
+    label: visually_hidden
+    settings:
+      image_link: content
+      image_style: event_block
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_string_long:
+    type: basic_string
+    label: visually_hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  langcode: true

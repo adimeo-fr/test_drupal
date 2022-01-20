@@ -1,0 +1,28 @@
+uuid: d158e8de-56e8-4706-9678-9d52d649f62f
+langcode: fr
+status: true
+dependencies:
+  module:
+    - node
+    - test_global
+  theme:
+    - test_drupal
+id: testblock
+theme: test_drupal
+region: content
+weight: 0
+provider: null
+plugin: test_block
+settings:
+  id: test_block
+  label: 'Test block'
+  label_display: '0'
+  provider: test_global
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      event: event

@@ -1,0 +1,10 @@
+uuid: 3d925a72-7302-4e46-9f6c-3b690c1a6ae2
+langcode: fr
+status: true
+dependencies:
+  module:
+    - node
+id: node.teaser_events
+label: 'Teaser events'
+targetEntityType: node
+cache: true

@@ -1,24 +1,24 @@
-uuid: f2d4b0dd-0c80-437f-9269-929d02091630
+uuid: 513dbdcd-31c9-43d9-8cdc-d2d9f7e3c6a3
 langcode: fr
 status: true
 dependencies:
   module:
     - system
   theme:
-    - bartik
+    - test_drupal
 _core:
   default_config_hash: NDwadleLD3YVSbDUaakxyYZyINYtkFtOVGShfq4kWy8
-id: bartik_branding
-theme: bartik
+id: test_drupal_branding
+theme: test_drupal
 region: header
-weight: 0
+weight: -5
 provider: null
 plugin: system_branding_block
 settings:
   id: system_branding_block
   label: 'Marque du site'
-  provider: system
   label_display: '0'
+  provider: system
   use_site_logo: true
   use_site_name: true
   use_site_slogan: true

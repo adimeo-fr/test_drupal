@@ -1,0 +1,15 @@
+uuid: 1344ba93-8a2d-424e-a7e4-efa07aacd92d
+langcode: fr
+status: true
+dependencies: {  }
+name: teaser_events
+label: 'Teaser events'
+effects:
+  8c9c06fc-51ce-4e45-9ec7-85b602030c71:
+    uuid: 8c9c06fc-51ce-4e45-9ec7-85b602030c71
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 600
+      height: 300
+      anchor: center-center

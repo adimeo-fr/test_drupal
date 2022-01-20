@@ -21,58 +21,58 @@ bundle: event
 mode: default
 content:
   body:
-    label: hidden
     type: text_default
-    weight: 5
+    label: hidden
     settings: {  }
     third_party_settings: {  }
+    weight: 5
     region: content
   field_date_end:
-    weight: 2
+    type: datetime_default
     label: above
     settings:
-      format_type: medium
       timezone_override: ''
+      format_type: medium
     third_party_settings: {  }
-    type: datetime_default
+    weight: 2
     region: content
   field_date_start:
-    weight: 1
+    type: datetime_default
     label: above
     settings:
-      format_type: medium
       timezone_override: ''
+      format_type: medium
     third_party_settings: {  }
-    type: datetime_default
+    weight: 1
     region: content
   field_event_type:
-    weight: 6
+    type: entity_reference_label
     label: above
     settings:
       link: true
     third_party_settings: {  }
-    type: entity_reference_label
+    weight: 6
     region: content
   field_image:
-    weight: 4
+    type: image
     label: above
     settings:
-      image_style: ''
       image_link: ''
+      image_style: ''
     third_party_settings: {  }
-    type: image
+    weight: 4
     region: content
   field_string_long:
-    weight: 3
+    type: basic_string
     label: above
     settings: {  }
     third_party_settings: {  }
-    type: basic_string
+    weight: 3
     region: content
   links:
-    weight: 0
-    region: content
     settings: {  }
     third_party_settings: {  }
+    weight: 0
+    region: content
 hidden:
   langcode: true

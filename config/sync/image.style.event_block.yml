@@ -1,0 +1,15 @@
+uuid: 9079cb59-04fc-42bb-beb3-186540280a43
+langcode: fr
+status: true
+dependencies: {  }
+name: event_block
+label: 'Event block'
+effects:
+  2289da0e-f4e2-4186-94c9-e40ef30ea3bb:
+    uuid: 2289da0e-f4e2-4186-94c9-e40ef30ea3bb
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 400
+      height: 300
+      anchor: center-center

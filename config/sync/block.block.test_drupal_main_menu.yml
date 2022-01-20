@@ -1,4 +1,4 @@
-uuid: adf699ec-5a24-4a03-970f-74222e6d81d0
+uuid: 82e92b66-eb42-4416-89f4-f6655c6c9d08
 langcode: fr
 status: true
 dependencies:
@@ -7,20 +7,20 @@ dependencies:
   module:
     - system
   theme:
-    - bartik
+    - test_drupal
 _core:
   default_config_hash: ChCx7DYNUrPTt5uiRdQAPDKJQMc-_SyAQTrZh8H0o-c
-id: bartik_main_menu
-theme: bartik
-region: primary_menu
-weight: 0
+id: test_drupal_main_menu
+theme: test_drupal
+region: header
+weight: -3
 provider: null
 plugin: 'system_menu_block:main'
 settings:
   id: 'system_menu_block:main'
   label: 'Navigation principale'
-  provider: system
   label_display: '0'
+  provider: system
   level: 1
   depth: 1
   expand_all_items: false

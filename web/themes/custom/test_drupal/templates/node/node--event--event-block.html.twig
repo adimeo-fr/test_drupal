@@ -1,0 +1,20 @@
+<div class="row bg-light m-3 p-3">
+  <div class="col-4">
+    {% if content.field_image is not empty %}
+      {{ content.field_image }}
+    {% endif %}
+  </div>
+
+  <div class="col-8">
+    {% if label and not page %}
+      <h2{{ title_attributes }}>
+        <a href="{{ url }}" rel="bookmark">{{ label }}</a>
+      </h2>
+    {% endif %}
+
+    {% if content.body is not empty %}
+      {{ content.body }}
+    {% endif %}
+  </div>
+
+</div>

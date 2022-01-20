@@ -1,10 +1,10 @@
 name: Test Drupal
 type: theme
-description: 'An empty theme with classy as base. Feel free to change its base theme.'
+description: 'Test drupal subtheme based on Bootstrap 5 theme.'
 core_version_requirement: ^8 || ^9
 libraries:
   - test_drupal/main
-base theme: classy
+base theme: bootstrap5
 regions:
   header: Header
   content: Content

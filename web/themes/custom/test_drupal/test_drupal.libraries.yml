@@ -5,3 +5,11 @@ main:
       assets/css/test_drupal.css: {}
   js:
     assets/js/test_drupal.js: {}
+
+bg-change:
+  js:
+    assets/js/bg-change.js: {}
+  dependencies:
+    - core/drupal
+    - core/jquery
+    - core/drupal.ajax

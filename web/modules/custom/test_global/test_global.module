@@ -1,0 +1,42 @@
+<?php
+
+/**
+ * @file
+ * Contains test_global.module.
+ */
+
+use Drupal\Core\Datetime\DrupalDateTime;
+use Drupal\node\NodeInterface;
+use Drupal\Core\Entity\EntityInterface;
+use Drupal\Core\Entity\Display\EntityViewDisplayInterface;
+
+/**
+ * Implements hook_entity_view_alter().
+ */
+function test_global_entity_view_alter(array &$build, EntityInterface $entity, EntityViewDisplayInterface $display) {
+  if ($entity->getEntityTypeId() === 'node') {
+    if ($entity->bundle() === 'event') {
+      $build['#attached']['library'][] = 'test_drupal/bg-change';
+    }
+  }
+}
+
+/**
+ * Implements hook_cron().
+ */
+function test_global_cron() {
+  // Get queue.
+  $queue = \Drupal::queue('cron_event_queue');
+  $nodeStorage = \Drupal::entityTypeManager()->getStorage('node');
+  $currentTime = new DrupalDateTime(date('Y-m-dTH:i:s'));
+
+  $query = $nodeStorage->getQuery();
+  $query->condition('status', NodeInterface::PUBLISHED);
+  $query->condition('field_date_end', $currentTime, '<');
+
+  foreach($nodeStorage->loadMultiple($query->execute()) as $item) {
+    // Create item to queue.
+    $queue->createItem($item);
+  }
+
+}

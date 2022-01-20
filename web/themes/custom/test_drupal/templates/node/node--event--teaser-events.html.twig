@@ -1,0 +1,19 @@
+{% set attributes = attributes.addClass('mx-2', 'ms-2', 'mb-4', 'p-2', 'bg-to-change') %}
+
+<div{{ attributes }}>
+  {% if content.field_image is not empty %}
+    {{ content.field_image }}
+  {% endif %}
+
+  {% if label and not page %}
+    <h2{{ title_attributes }}>
+      <a href="{{ url }}" rel="bookmark">{{ label }}</a>
+    </h2>
+  {% endif %}
+
+  {% if content.body is not empty %}
+    {{ content.body }}
+  {% endif %}
+
+  <button data-btn-bg type="button" class="btn btn-outline-primary">{{ 'Change color'|t }}</button>
+</div>

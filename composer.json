@@ -16,13 +16,12 @@
     ],
     "require": {
         "composer/installers": "^1.9",
+        "drupal/bootstrap5": "^1.1",
         "drupal/core-composer-scaffold": "^9",
         "drupal/core-project-message": "^9",
         "drupal/core-recommended": "^9",
         "drupal/devel": "^4.1.3",
         "drush/drush": "^10.2"
-    },
-    "require-dev": {
     },
     "conflict": {
         "drupal/drupal": "*"

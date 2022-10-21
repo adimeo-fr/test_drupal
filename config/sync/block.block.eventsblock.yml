@@ -1,0 +1,28 @@
+uuid: 814e590b-3561-44ae-bcc7-a56e85974f6f
+langcode: fr
+status: true
+dependencies:
+  module:
+    - events
+    - node
+  theme:
+    - bartik
+id: eventsblock
+theme: bartik
+region: content
+weight: -2
+provider: null
+plugin: events_block
+settings:
+  id: events_block
+  label: 'Bloc d''événements remontés'
+  label_display: visible
+  provider: events
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      event: event

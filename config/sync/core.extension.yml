@@ -21,6 +21,7 @@ module:
   devel_generate: 0
   dynamic_page_cache: 0
   editor: 0
+  events: 0
   field: 0
   field_ui: 0
   file: 0
@@ -58,4 +59,5 @@ theme:
   classy: 0
   test_drupal: 0
   claro: 0
+  bartik: 0
 profile: standard

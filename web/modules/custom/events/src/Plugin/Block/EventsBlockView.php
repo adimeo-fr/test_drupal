@@ -7,6 +7,7 @@ use Drupal\Core\Block\BlockBase;
 use \Drupal\Core\Datetime\DrupalDateTime;
 use \Drupal\datetime\Plugin\Field\FieldType\DateTimeItemInterface;
 use \Drupal\node\Entity\Node;
+use Drupal\Core\Cache\Cache;
 
 /**
  * Block to display more events.
@@ -55,6 +56,19 @@ class EventsBlockView extends BlockBase
 
         // Build the results.
         $build = \Drupal::entityTypeManager()->getViewBuilder('node')->viewMultiple($events_ref, 'teaser');
+
         return $build;
+    }
+
+    public function getCacheTags()
+    {
+        //With this when your node change your block will rebuild
+        if ($node = \Drupal::routeMatch()->getParameter('node')) {
+            //if there is node add its cachetag
+            return Cache::mergeTags(parent::getCacheTags(), array('node:' . $node->id()));
+        } else {
+            //Return default tags instead.
+            return parent::getCacheTags();
+        }
     }
 }

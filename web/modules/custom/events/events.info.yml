@@ -1,0 +1,5 @@
+name: 'Custom events'
+description: 'Custom module to add functions for event content type.'
+type: module
+core_version_requirement: ^8 || ^9
+package: 'custom'

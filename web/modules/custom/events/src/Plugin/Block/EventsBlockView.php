@@ -4,14 +4,14 @@ namespace Drupal\events\Plugin\Block;
 
 use Drupal\Core\Block\Annotation\Block;
 use Drupal\Core\Block\BlockBase;
-use \Drupal\Core\Datetime\DrupalDateTime;
-use \Drupal\datetime\Plugin\Field\FieldType\DateTimeItemInterface;
-use \Drupal\node\Entity\Node;
+use Drupal\Core\Datetime\DrupalDateTime;
+use Drupal\datetime\Plugin\Field\FieldType\DateTimeItemInterface;
+use Drupal\node\Entity\Node;
 use Drupal\Core\Cache\Cache;
 
 /**
  * Block to display more events.
- * 
+ *
  * @Block(
  *  id = "events_block",
  *  admin_label = @Translation("Events block")
@@ -70,5 +70,13 @@ class EventsBlockView extends BlockBase
             //Return default tags instead.
             return parent::getCacheTags();
         }
+    }
+
+    public function getCacheContexts()
+    {
+        //if you depends on \Drupal::routeMatch()
+        //you must set context of this block with 'route' context tag.
+        //Every new route this block will rebuild
+        return Cache::mergeContexts(parent::getCacheContexts(), array('route'));
     }
 }

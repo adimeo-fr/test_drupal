@@ -1,0 +1,5 @@
+services:
+  events.unpublish.queue.service:
+    class: Drupal\Core\Queue\QueueInterface
+    factory: queue:get
+    arguments: ['unpublish_old_events']

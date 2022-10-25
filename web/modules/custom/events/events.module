@@ -1,0 +1,26 @@
+<?php
+
+use Drupal\Core\Datetime\DrupalDateTime;
+use Drupal\datetime\Plugin\Field\FieldType\DateTimeItemInterface;
+use Drupal\node\Entity\Node;
+
+/**
+ * Implements hook_cron().
+ */
+function events_cron()
+{
+    $queue = \Drupal::service('events.unpublish.queue.service');
+    $now = new DrupalDateTime('now');
+
+    // All node ids to unpublish.
+    $nids = \Drupal::entityQuery('node')
+        ->condition('field_date_end', $now->format(DateTimeItemInterface::DATETIME_STORAGE_FORMAT), '<=') // Get only passed events
+        ->condition('status', '1')
+        ->execute();
+
+    $old_events = Node::loadMultiple($nids);
+
+    foreach ($old_events as $old_event) {
+        $queue->createItem($old_event);
+    }
+}

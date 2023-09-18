@@ -6,7 +6,7 @@ Un **type de contenu** `Événement` a été créé et des contenus générés a
 
 La version du core est la 10.0.9 et le composer lock a été généré sur PHP 8.1.
 
-Les files sont versionnées sous forme d'une archive compressée. Vous êtes invité à créer un fichier `settings.local.php` pour renseigner vos accès à la DB. Le fichier `settings.php` est lui versionné.
+Les files sont versionnées sous forme d'une archive compressée. Vous êtes invité à créer un fichier `settings.local.php` pour renseigner vos accès à la DB. Le fichier `settings.php` étant lui versionné.
 
 ## Consignes
 
@@ -18,12 +18,12 @@ Les files sont versionnées sous forme d'une archive compressée. Vous êtes inv
 ### 2. Faire une tache cron
 qui dépublie, **de la manière la plus optimale,** les événements dont la date de fin est dépassée à l'aide d'un **QueueWorker**.
 
-
 ## Rendu attendu
-**Vous devez cloner ce repo, MERCI DE NE PAS LE FORKER,** et nous envoyer soit un lien vers votre propre repo, soit un package avec :
+Merci de nous envoyer soit un package, ou un lien vers un repository avec :
 
-* votre configuration exportée ;
-* **et/ou** un dump de base de données ;
+* uniquement le contenu du dossier "modules/custom" avec vos développements
 * **et pourquoi pas** des readme, des commentaires etc. :)
 
-**Le temps que vous avez passé** : par mail ou dans un readme par exemple.
+Quoi qu'il arrive **MERCI DE NE PAS FORKER** ce repository.
+
+Merci également de préciser **le temps que vous avez passé**, par mail ou dans un readme par exemple.
